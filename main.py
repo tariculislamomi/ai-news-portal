@@ -90,3 +90,24 @@ def generate_news_photocard(news_title, logo_path, bg_template_path, output_path
 if __name__ == "__main__":
     sample_rss = "https://feeds.bbci.co.uk/bengali/rss.xml"
     fetch_and_process_rss(sample_rss)
+    import json
+
+# ধরা যাক, আপনার পাইথন স্ক্রিপ্ট বা OpenAI থেকে রি-রাইট করা নিউজগুলো একটি লিস্টে (List) রাখা আছে, 
+# যার নাম দেওয়া হলো `scraped_news` (আপনার ভেরিয়েবলের নাম আলাদা হলে সেটি এখানে বসিয়ে দেবেন)।
+# ফরম্যাটটি ঠিক নিচের মতো হতে হবে:
+
+scraped_news = [
+    {
+        "title": "আপনার পাইথন স্ক্রিপ্ট দিয়ে আনা নিউজের শিরোনাম",
+        "category": "প্রযুক্তি",
+        "description": "নিউজের বিস্তারিত বা সারসংক্ষেপ...",
+        "date": "আজ, ১০ মিনিট আগে",
+        "image": "ইমেলের বা নিউজের ছবির ডিরেক্ট লিংক (URL)"
+    }
+]
+
+# এবার এই কোডটুকু দিলেই পাইথন অটোমেটিক `news.json` ফাইল তৈরি করে ডাটাগুলো সেভ করে ফেলবে:
+with open("news.json", "w", encoding="utf-8") as f:
+    json.dump(scraped_news, f, ensure_ascii=False, indent=4)
+
+print("News successfully saved to news.json!")
