@@ -1,114 +1,115 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="bn">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI News Portal - Bangladesh</title>
+    <title>সংবাদ পোর্টাল - বাংলাদেশ</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Hind Siliguri', sans-serif; }
+    </style>
 </head>
-<body class="bg-gray-50 text-gray-800 font-sans">
+<body class="bg-gray-100 text-gray-900">
 
-    <!-- Header Section -->
-    <header class="bg-blue-900 text-white shadow-md">
-        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <h1 class="text-2xl font-bold tracking-wide">🇧🇩 AI News Portal BD</h1>
-            <div class="flex items-center space-x-4">
-                <span class="text-xs bg-blue-700 px-3 py-1 rounded-full uppercase tracking-wider">Automated by AI</span>
-                <button onclick="toggleAdminPanel()" class="bg-white text-blue-900 px-3 py-1 rounded text-sm font-semibold hover:bg-gray-100 transition">⚙️ Admin Panel</button>
-            </div>
-        </div>
-    </header>
-
-    <!-- Main Container -->
-    <main class="container mx-auto px-6 py-8">
-        
-        <!-- Hero Section -->
-        <section class="mb-10 text-center bg-white p-8 rounded-xl shadow-sm border border-gray-100">
-            <h2 class="text-3xl font-extrabold text-gray-900 mb-3">Latest AI-Curated News</h2>
-            <p class="text-gray-600 max-w-2xl mx-auto">Real-time automated news collection and rewriting powered by advanced AI and GitHub Actions for the Bangladeshi audience.</p>
-        </section>
-
-        <!-- News Grid -->
-        <section id="news-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <!-- Dynamic News Cards will appear here -->
-            <article class="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden hover:shadow-md transition">
-                <div class="p-6">
-                    <span class="text-xs font-semibold text-blue-600 uppercase tracking-wider">Technology</span>
-                    <h3 class="text-xl font-bold text-gray-900 mt-2 mb-3">Advancements in AI and Automation Across Bangladesh</h3>
-                    <p class="text-gray-600 text-sm mb-4">Exploring how artificial intelligence is transforming local industries, software development, and automated workflows.</p>
-                    <div class="flex justify-between items-center text-xs text-gray-400">
-                        <span>📅 Today, 2:16 PM</span>
-                        <span class="text-blue-600 font-medium">Read More →</span>
-                    </div>
-                </div>
-            </article>
-        </section>
-
-    </main>
-
-    <!-- Hidden Admin Modal / Panel -->
-    <div id="admin-modal" class="fixed inset-0 bg-black bg-50 flex items-center justify-center hidden z-50">
-        <div class="bg-white w-full max-w-lg p-6 rounded-xl shadow-xl relative">
-            <button onclick="toggleAdminPanel()" class="absolute top-4 right-4 text-gray-500 hover:text-gray-800 text-xl font-bold">&times;</button>
-            
-            <h3 class="text-2xl font-bold text-gray-900 mb-4">Admin Dashboard</h3>
-            
-            <!-- Add News Form -->
-            <form id="news-form" onsubmit="addNewNews(event)" class="space-y-4">
-                <div>
-                    <label class="block text-sm font-medium text-gray-700">News Title</label>
-                    <input type="text" id="news-title" required class="w-full mt-1 p-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:outline-none">
-                </div>
-                <div>
-                    <label class="block text-sm font-medium text-gray-700">Category</label>
-                    <input type="text" id="news-category" required class="w-full mt-1 p-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:outline-none" placeholder="Technology / Economy">
-                </div>
-                <div>
-                    <label class="block text-sm font-medium text-gray-700">Description</label>
-                    <textarea id="news-desc" rows="3" required class="w-full mt-1 p-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:outline-none"></textarea>
-                </div>
-                <button type="submit" class="w-full bg-blue-900 text-white py-2 rounded-lg font-semibold hover:bg-blue-800 transition">Publish News</button>
-            </form>
+    <!-- Top Bar / Date -->
+    <div class="bg-red-700 text-white text-sm py-2">
+        <div class="container mx-auto px-4 flex justify-between items-center">
+            <span>মঙ্গলবার, ২৬ নভেম্বর ২০২৬</span>
+            <span class="bg-red-800 px-3 py-0.5 rounded text-xs font-semibold">বিশেষ সংবাদ</span>
         </div>
     </div>
 
+    <!-- Header / Logo -->
+    <header class="bg-white shadow-sm border-b">
+        <div class="container mx-auto px-4 py-6 text-center">
+            <h1 class="text-4xl md:text-5xl font-extrabold text-red-700 tracking-wider">দৈনিক সংবাদ প্রবাহ</h1>
+            <p class="text-sm text-gray-500 mt-1">সত্য ও বস্তুনিষ্ঠ সংবাদের সারথি</p>
+        </div>
+    </header>
+
+    <!-- Navigation Menu -->
+    <nav class="bg-gray-900 text-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-4 flex space-x-6 overflow-x-auto py-3 text-sm font-medium">
+            <a href="#" class="hover:text-red-400 whitespace-nowrap">সর্বশেষ</a>
+            <a href="#" class="text-red-400 whitespace-nowrap font-bold">প্রচ্ছদ</a>
+            <a href="#" class="hover:text-red-400 whitespace-nowrap">রাজনীতি</a>
+            <a href="#" class="hover:text-red-400 whitespace-nowrap">বাংলাদেশ</a>
+            <a href="#" class="hover:text-red-400 whitespace-nowrap">বিশ্ব</a>
+            <a href="#" class="hover:text-red-400 whitespace-nowrap">বাণিজ্য</a>
+            <a href="#" class="hover:text-red-400 whitespace-nowrap">প্রযুক্তি</a>
+            <a href="#" class="hover:text-red-400 whitespace-nowrap">খেলাধুলা</a>
+            <a href="#" class="hover:text-red-400 whitespace-nowrap">বিনোদম</a>
+        </div>
+    </nav>
+
+    <!-- Main Content Layout (Prothom Alo Style) -->
+    <main class="container mx-auto px-4 py-6 grid grid-cols-1 lg:grid-cols-3 gap-6">
+        
+        <!-- Left & Center: Top News & Lead Stories (2 Columns) -->
+        <section class="lg:col-span-2 space-y-6">
+            
+            <!-- Big Lead News -->
+            <div class="bg-white p-4 rounded-lg shadow-sm border">
+                <span class="text-xs font-bold text-red-600 bg-red-50 px-2 py-1 rounded uppercase">প্রধান খবর</span>
+                <h2 class="text-2xl md:text-3xl font-bold mt-2 mb-3 hover:text-red-700 cursor-pointer">
+                    ডিজিটাল অটোমেশন ও কৃত্রিম বুদ্ধিমত্তার ছোঁয়ায় বদলে যাচ্ছে দেশের প্রযুক্তি খাতের চিত্র
+                </h2>
+                <p class="text-gray-600 text-sm md:text-base leading-relaxed mb-4">
+                    আধুনিক প্রযুক্তি ও এআই টুলের ব্যবহারের ফলে তরুণ প্রজন্মের উদ্যোক্তারা নতুন সব স্টার্টআপ ও স্বয়ংক্রিয় সিস্টেম তৈরি করছেন, যা অর্থনীতিতে রাখছে দারুণ ভূমিকা।
+                </p>
+                <div class="text-xs text-gray-400 flex justify-between border-t pt-3">
+                    <span>নিজস্ব প্রতিবেদক, ঢাকা</span>
+                    <span>আপডেট: ১০ মিনিট আগে</span>
+                </div>
+            </div>
+
+            <!-- Sub News Grid (2 columns) -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div class="bg-white p-4 rounded-lg shadow-sm border">
+                    <span class="text-xs font-bold text-blue-600">অর্থনীতি</span>
+                    <h3 class="font-bold text-lg mt-1 mb-2 hover:text-red-700 cursor-pointer">ডুয়াল কারেন্সি কার্ড ও অনলাইন পেমেন্ট ব্যবস্থায় নতুন সুযোগ</h3>
+                    <p class="text-xs text-gray-600">বাণিজ্যিক ব্যাংকগুলোর সেবা সম্প্রসারণ ও ডিজিটাল লেনদেন সহজ হওয়ায় গ্রাহকদের আগ্রহ বাড়ছে...</p>
+                </div>
+                <div class="bg-white p-4 rounded-lg shadow-sm border">
+                    <span class="text-xs font-bold text-green-600">বাণিজ্য</span>
+                    <h3 class="font-bold text-lg mt-1 mb-2 hover:text-red-700 cursor-pointer">তৈরি পোশাক শিল্পে আন্তর্জাতিক ক্রেতাদের নতুন অর্ডার বৃদ্ধি</h3>
+                    <p class="text-xs text-gray-600">বিশ্ববাজারে রপ্তানি প্রবৃদ্ধি ধরে রাখতে কারখানাগুলো আধুনিক সাপ্লাই চেইন ও এআই অটোমেশন ব্যবহার করছে...</p>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- Right Sidebar: Latest / Trending News (1 Column) -->
+        <aside class="space-y-6">
+            <div class="bg-white p-4 rounded-lg shadow-sm border">
+                <h3 class="text-lg font-bold border-b pb-2 text-red-700 mb-4">সর্বাধিক পঠিত</h3>
+                <ul class="space-y-4 text-sm">
+                    <li class="border-b pb-3">
+                        <span class="text-gray-400 text-xs font-bold">০১</span>
+                        <p class="font-semibold mt-1 hover:text-red-700 cursor-pointer">স্মার্ট বাংলাদেশ গড়তে তরুণদের মাঝে কোডিং ও রোবটিক্স চর্চা বৃদ্ধি</p>
+                    </li>
+                    <li class="border-b pb-3">
+                        <span class="text-gray-400 text-xs font-bold">০২</span>
+                        <p class="font-semibold mt-1 hover:text-red-700 cursor-pointer">নবাবগঞ্জ ও ঢাকার মধ্যে যাতায়াত সহজ করতে নতুন গণপরিবহন পরিকল্পনা</p>
+                    </li>
+                    <li>
+                        <span class="text-gray-400 text-xs font-bold">০৩</span>
+                        <p class="font-semibold mt-1 hover:text-red-700 cursor-pointer">ফ্রিল্যান্সারদের জন্য আধুনিক পেমেন্ট গেটওয়ে এবং ক্লাউড হোস্টিং সুবিধা</p>
+                    </li>
+                </ul>
+            </div>
+        </aside>
+
+    </main>
+
     <!-- Footer -->
-    <footer class="bg-white border-t border-gray-200 mt-16 py-6 text-center text-sm text-gray-500">
-        <p>&copy; 2026 AI News Portal BD. Powered by Vercel & GitHub Actions.</p>
+    <footer class="bg-gray-900 text-white py-8 mt-12 text-center text-sm">
+        <div class="container mx-auto px-4">
+            <p>&copy; ২০২৬ দৈনিক সংবাদ প্রবাহ। সর্বস্বত্ব সংরক্ষিত।</p>
+            <p class="text-gray-400 text-xs mt-2">GitHub Actions ও Vercel দ্বারা স্বয়ংক্রিয়ভাবে পরিচালিত।</p>
+        </div>
     </footer>
 
-    <!-- Admin Script -->
-    <script>
-        function toggleAdminPanel() {
-            const modal = document.getElementById('admin-modal');
-            modal.classList.toggle('hidden');
-        }
-
-        function addNewNews(event) {
-            event.preventDefault();
-            const title = document.getElementById('news-title').value;
-            const category = document.getElementById('news-category').value;
-            const desc = document.getElementById('news-desc').value;
-
-            const container = document.getElementById('news-container');
-            const card = document.createElement('article');
-            card.className = "bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden hover:shadow-md transition";
-            card.innerHTML = `
-                <div class="p-6">
-                    <span class="text-xs font-semibold text-blue-600 uppercase tracking-wider">${category}</span>
-                    <h3 class="text-xl font-bold text-gray-900 mt-2 mb-3">${title}</h3>
-                    <p class="text-gray-600 text-sm mb-4">${desc}</p>
-                    <div class="flex justify-between items-center text-xs text-gray-400">
-                        <span>📅 Just Now</span>
-                        <span class="text-blue-600 font-medium">Read More →</span>
-                    </div>
-                </div>
-            `;
-            container.prepend(card);
-            document.getElementById('news-form').reset();
-            toggleAdminPanel();
-            alert('News published successfully!');
-        }
-    </script>
 </body>
 </html>
