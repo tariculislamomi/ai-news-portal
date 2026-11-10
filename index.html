@@ -16,7 +16,7 @@
     <div class="bg-red-700 text-white text-sm py-2">
         <div class="container mx-auto px-4 flex justify-between items-center">
             <span>মঙ্গলবার, ২৬ নভেম্বর ২০২৬</span>
-            <span class="bg-red-800 px-3 py-0.5 rounded text-xs font-semibold">বিশেষ সংবাদ</span>
+            <span class="bg-red-800 px-3 py-0.5 rounded text-xs font-semibold">লাইভ এআই নিউজ পোর্টাল</span>
         </div>
     </div>
 
@@ -39,48 +39,19 @@
             <a href="#" class="hover:text-red-400 whitespace-nowrap">বাণিজ্য</a>
             <a href="#" class="hover:text-red-400 whitespace-nowrap">প্রযুক্তি</a>
             <a href="#" class="hover:text-red-400 whitespace-nowrap">খেলাধুলা</a>
-            <a href="#" class="hover:text-red-400 whitespace-nowrap">বিনোদম</a>
         </div>
     </nav>
 
-    <!-- Main Content Layout (Prothom Alo Style) -->
+    <!-- Main Content Layout -->
     <main class="container mx-auto px-4 py-6 grid grid-cols-1 lg:grid-cols-3 gap-6">
         
-        <!-- Left & Center: Top News & Lead Stories (2 Columns) -->
-        <section class="lg:col-span-2 space-y-6">
-            
-            <!-- Big Lead News -->
-            <div class="bg-white p-4 rounded-lg shadow-sm border">
-                <span class="text-xs font-bold text-red-600 bg-red-50 px-2 py-1 rounded uppercase">প্রধান খবর</span>
-                <h2 class="text-2xl md:text-3xl font-bold mt-2 mb-3 hover:text-red-700 cursor-pointer">
-                    ডিজিটাল অটোমেশন ও কৃত্রিম বুদ্ধিমত্তার ছোঁয়ায় বদলে যাচ্ছে দেশের প্রযুক্তি খাতের চিত্র
-                </h2>
-                <p class="text-gray-600 text-sm md:text-base leading-relaxed mb-4">
-                    আধুনিক প্রযুক্তি ও এআই টুলের ব্যবহারের ফলে তরুণ প্রজন্মের উদ্যোক্তারা নতুন সব স্টার্টআপ ও স্বয়ংক্রিয় সিস্টেম তৈরি করছেন, যা অর্থনীতিতে রাখছে দারুণ ভূমিকা।
-                </p>
-                <div class="text-xs text-gray-400 flex justify-between border-t pt-3">
-                    <span>নিজস্ব প্রতিবেদক, ঢাকা</span>
-                    <span>আপডেট: ১০ মিনিট আগে</span>
-                </div>
-            </div>
-
-            <!-- Sub News Grid (2 columns) -->
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <div class="bg-white p-4 rounded-lg shadow-sm border">
-                    <span class="text-xs font-bold text-blue-600">অর্থনীতি</span>
-                    <h3 class="font-bold text-lg mt-1 mb-2 hover:text-red-700 cursor-pointer">ডুয়াল কারেন্সি কার্ড ও অনলাইন পেমেন্ট ব্যবস্থায় নতুন সুযোগ</h3>
-                    <p class="text-xs text-gray-600">বাণিজ্যিক ব্যাংকগুলোর সেবা সম্প্রসারণ ও ডিজিটাল লেনদেন সহজ হওয়ায় গ্রাহকদের আগ্রহ বাড়ছে...</p>
-                </div>
-                <div class="bg-white p-4 rounded-lg shadow-sm border">
-                    <span class="text-xs font-bold text-green-600">বাণিজ্য</span>
-                    <h3 class="font-bold text-lg mt-1 mb-2 hover:text-red-700 cursor-pointer">তৈরি পোশাক শিল্পে আন্তর্জাতিক ক্রেতাদের নতুন অর্ডার বৃদ্ধি</h3>
-                    <p class="text-xs text-gray-600">বিশ্ববাজারে রপ্তানি প্রবৃদ্ধি ধরে রাখতে কারখানাগুলো আধুনিক সাপ্লাই চেইন ও এআই অটোমেশন ব্যবহার করছে...</p>
-                </div>
-            </div>
-
+        <!-- Left & Center: Dynamic News Container -->
+        <section class="lg:col-span-2 space-y-6" id="news-container">
+            <!-- JavaScript will inject news cards here dynamically from news.json -->
+            <div class="text-center py-10 text-gray-500">নিউজ লোড হচ্ছে...</div>
         </section>
 
-        <!-- Right Sidebar: Latest / Trending News (1 Column) -->
+        <!-- Right Sidebar -->
         <aside class="space-y-6">
             <div class="bg-white p-4 rounded-lg shadow-sm border">
                 <h3 class="text-lg font-bold border-b pb-2 text-red-700 mb-4">সর্বাধিক পঠিত</h3>
@@ -92,10 +63,6 @@
                     <li class="border-b pb-3">
                         <span class="text-gray-400 text-xs font-bold">০২</span>
                         <p class="font-semibold mt-1 hover:text-red-700 cursor-pointer">নবাবগঞ্জ ও ঢাকার মধ্যে যাতায়াত সহজ করতে নতুন গণপরিবহন পরিকল্পনা</p>
-                    </li>
-                    <li>
-                        <span class="text-gray-400 text-xs font-bold">০৩</span>
-                        <p class="font-semibold mt-1 hover:text-red-700 cursor-pointer">ফ্রিল্যান্সারদের জন্য আধুনিক পেমেন্ট গেটওয়ে এবং ক্লাউড হোস্টিং সুবিধা</p>
                     </li>
                 </ul>
             </div>
@@ -111,5 +78,55 @@
         </div>
     </footer>
 
+    <!-- JavaScript to Fetch and Display News from news.json -->
+    <script>
+        async function fetchNews() {
+            try {
+                const response = await fetch('news.json');
+                const newsList = await response.json();
+                
+                const container = document.getElementById('news-container');
+                container.innerHTML = ''; // Clear loading text
+
+                newsList.forEach((news, index) => {
+                    const article = document.createElement('div');
+                    
+                    if (index === 0) {
+                        // First news as Big Lead Story
+                        article.className = "bg-white p-4 rounded-lg shadow-sm border";
+                        article.innerHTML = `
+                            <img src="${news.image}" alt="News Image" class="w-full h-64 object-cover rounded-md mb-4">
+                            <span class="text-xs font-bold text-red-600 bg-red-50 px-2 py-1 rounded uppercase">${news.category}</span>
+                            <h2 class="text-2xl md:text-3xl font-bold mt-2 mb-3 hover:text-red-700 cursor-pointer">${news.title}</h2>
+                            <p class="text-gray-600 text-sm md:text-base leading-relaxed mb-4">${news.description}</p>
+                            <div class="text-xs text-gray-400 flex justify-between border-t pt-3">
+                                <span>এআই নিউজ বট</span>
+                                <span>আপডেট: ${news.date}</span>
+                            </div>
+                        `;
+                    } else {
+                        // Other news as cards
+                        article.className = "bg-white p-4 rounded-lg shadow-sm border flex flex-col md:flex-row gap-4 items-center";
+                        article.innerHTML = `
+                            <img src="${news.image}" alt="News Image" class="w-full md:w-48 h-32 object-cover rounded-md">
+                            <div>
+                                <span class="text-xs font-bold text-blue-600">${news.category}</span>
+                                <h3 class="font-bold text-lg mt-1 mb-2 hover:text-red-700 cursor-pointer">${news.title}</h3>
+                                <p class="text-xs text-gray-600 mb-2">${news.description}</p>
+                                <span class="text-xs text-gray-400">${news.date}</span>
+                            </div>
+                        `;
+                    }
+                    container.appendChild(article);
+                });
+            } catch (error) {
+                console.error('Error loading news:', error);
+                document.getElementById('news-container').innerHTML = '<p class="text-red-500">নিউজ লোড করতে সমস্যা হয়েছে।</p>';
+            }
+        }
+
+        // Load news on page load
+        fetchNews();
+    </script>
 </body>
 </html>
